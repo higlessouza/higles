@@ -1,190 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta property="og:image" content="img/Perfil.png">
+    <meta property="og:image" content="img/Perfil.jpg">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="img/Perfil.png">
-    <meta name="author" content="">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Higles Souza</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- Custom fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
 
+
+    <!-- DevIcons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom styles for dark theme -->
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #63a4ff;
+            text-decoration: none;
+        }
+
+        .navbar {
+            background-color: #1f1f1f;
+        }
+
+        .navbar-brand img {
+            border: 2px solid #ffffff;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+        }
+
+        .resume-section {
+            padding: 100px 0;
+        }
+
+        .resume-item {
+            border-left: 2px solid #1e90ff;
+            padding-left: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .resume-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            background-color: #1e90ff;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #1e90ff;
+        }
+
+        hr {
+            border-color: #444;
+        }
+
+        /* Button styles */
+        .btn-custom {
+            background-color: #1e90ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #63a4ff;
+            color: #ffffff;
+        }
+
+        /* Additional styles */
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background-color: #1e90ff;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .resume-item {
+                padding-left: 15px;
+            }
+
+            .resume-item::before {
+                left: -12px;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Higles Souza</span>
-            <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/Perfil.png" alt="">
-            </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#experience">Experiência</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#education">Formação</a>
-                </li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mt-3" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiência</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Formação</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Competências</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contato</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
+    <!-- Page Content -->
     <div class="container-fluid p-0">
 
-        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-            <div class="my-auto">
+        <!-- About Section -->
+        <section class="resume-section d-flex align-items-center" id="about" data-aos="fade-up">
+            <div class="container text-center">
+                <img class="img-fluid rounded-circle mb-4" src="img/Perfil.jpg" alt="Higles Souza" width="200"
+                    height="200">
                 <h1 class="mb-0">Higles
                     <span class="text-primary">Souza</span>
                 </h1>
-                <div class="subheading mb-5">Belo Horizonte - MG · (31)9 8257-7800 ·
-                    <span class="mb-1">HIGLES.SOUZA@GMAIL.COM</span>
+                <div class="subheading mb-5">
+                    Belo Horizonte - MG · (31) 9 8257-7800 ·
+                    <a href="mailto:higles.souza@gmail.com">higles.souza@gmail.com</a>
                 </div>
-                <p class="lead mb-5">Atualmente trabalho como desenvolvedor pleno na Localiza. Tenho mais de três anos de experiência em desenvolvimento, análise de requisitos e demais aspectos que envolvem a criação/manutenção de uma aplicação.</p>
-                <p class="lead mb-5">Participei de projetos na Accenture, desenvolvendo soluções em .Net para clientes da américa latina, também suportando aplicações legadas de diversas linguagens e tecnologias. </p>
-                
+                <p class="lead mb-5">Sou engenheiro de software sênior com mais de 5 anos de experiência, atualmente atuando na Localiza&Co, onde impulsiono inovações com IA Generativa. Uso modelos GPT da OpenAI integrados via Python para criar soluções eficientes e inteligentes.</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/higles/">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/higlessouza">
-                        <i class="fab fa-github"></i>
-                    </a>
-                      <a href="https://api.whatsapp.com/send?phone=5531982577800">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/higles/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/higlessouza" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5531982577800" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </section>
 
         <hr class="m-0">
 
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-            <div class="my-auto">
-                <h2 class="mb-5">Experiência</h2>
+        <!-- Experience Section -->
+<!-- Experience Section -->
+<section class="resume-section" id="experience" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Experiência</h2>
 
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Localiza</h3>
-                        <div class="subheading mb-3">Desenvolvedor Pleno</div>
-                        <p>Desenvolvimento .Net para a aplicação de aluguel de carros, utilizando metodologia ágil. </p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Fevereiro 2021 - Atualmente</span>
-                    </div>
-                </div>
+        <!-- Experience Item - Localiza&Co - Engenheiro de Software Sênior -->
+        <div class="resume-item">
+            <h3 class="mb-0">Localiza&Co</h3>
+            <div class="subheading mb-3">Engenheiro de Software Sênior</div>
+            <span class="text-primary">Abril 2022 - Atualmente</span>
 
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Accenture</h3>
-                        <div class="subheading mb-3">Analista Pleno</div>
-                        <p  align="justify">Participei de projetos com suporte ao sistema PIMS IP.21e sistemas MES para clientes da América Latina. Além disso, participei do desenvolvimento em .NET criando API's para integração de sistemas, desenvolvimento em Java utilizando o framework JHipster, gerenciamento de VM na AWS, utilizei banco de dados SQL Server e MySql, participei da automatização de relatórios em Power Bi e criação de dashboards no spotfire.</p>
-                        <div class="subheading mb-3">Analista Junior</div>
-                        <p>Suporte aos sistemas MES Simatic</p>
-                        <p>Suporte ao sistema PIMS IP.21 </p>
-                         <p>Desenvolvimento .Net</p>
-                        <p>Desenvolvimento Java utilizando o framework JHipster</p>
-                        <p>Desenvolvimento de API's para integração de sistemas</p>
-                        <p>Gerenciamento de VM na AWS</p>
-                        <p>Hospedagem de sistema em VM linux na AWS</p>
-                        <p>Banco de dados SQL Server e MySql</p>
-                        <p>Automatização de relatórios em Power Bi</p>
-                         <p>Criação de dashboards no spotfire</p>
-                        
-                        <div class="subheading mb-3">Estágiario</div>
-                        <p>Desenvolvimento Full Stack</p>
-                        <p>Desenvolvimento de dashboards em Power BI</p>
-                        <p>Suporte aos sistemas MES e PIMS</p>
-                        <p>Integração de sistemas</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Agosto 2018 - Fevereiro 2021</span>
-                    </div>
-                </div>
+            <ul>
+                <li>Desenvolvimento utilizando IA Generativa, com modelos GPT-3.5, GPT-4 e GPT-4o.</li>
+                <li>Backend implementado em Python, com integração de MongoDB como base de dados.</li>
+                <li>Integração com OpenAI, utilizando Function/Tool Calling, seguindo as melhores práticas de LLM.</li>
+                <li>Foco em observabilidade e monitoramento com ferramentas como Datadog.</li>
+                <li>RAG (Retrieval-Augmented Generation) para aprimorar a precisão e eficiência.</li>
+                <li>Colaboração em um time multidisciplinar para garantir a entrega de soluções inovadoras e eficazes.</li>
+            </ul>
+            <div class="subheading mb-3">Engenheiro de Software Pleno</div>
+            <span class="text-primary">Janeiro 2021 - Abril 2022</span>
 
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Elmaz Caminhões</h3>
-                        <div class="subheading mb-3">Estágiario</div>
-                        <p>Desenvolvimento de sistema interno de gerenciamento de desktops</p>
-                        <p>Suporte nivel 1</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Agosto 2017 - Julho 2018</span>
-                    </div>
-                </div>
+            <ul>
+                <li>Responsável pelo produto principal da empresa, gerenciando cotações e reservas de aluguel de carros (mais de 500 mil reservas por mês, mais de 6 mil transações por minuto).</li>
+                <li>Desenvolvimento de APIs REST em .NET 6.</li>
+                <li>Integração com SQL Server, Redis e Sybase usando Dapper e Entity Framework.</li>
+                <li>Integração de microsserviços utilizando Kafka e RabbitMQ para comunicação orientada a eventos.</li>
+                <li>Revisão de código e práticas de pair programming, assegurando Clean Code e princípios SOLID.</li>
+                <li>Deploy em AWS e on-premise via Azure CI/CD Pipelines e Git.</li>
+                <li>Realização de testes integrados, de carga e QA no ambiente de teste.</li>
+                <li>Gerenciamento de escalabilidade de infraestrutura Kubernetes.</li>
+                <li>Observabilidade de métricas de engenharia e negócios com Datadog e Grafana.</li>
+                <li>Manutenção de aplicação legado SOAP .NET Framework.</li>
+            </ul>
+        </div>
 
-        </section>
+        <!-- Experience Item - Accenture Brasil - Analista de Sistemas Pleno -->
+        <div class="resume-item">
+            <h3 class="mb-0">Accenture Brasil</h3>
+            <div class="subheading mb-3">Analista de Sistemas Pleno</div>
+            <span class="text-primary">Outubro 2020 - Janeiro 2021</span>
+            <ul>
+                <li>Participação em projetos com suporte N2 e N3 aos sistemas PIMS IP.21 e MES.</li>
+                <li>Desenvolvimento de correções e melhorias em .NET para clientes da América Latina.</li>
+                <li>Desenvolvimento de APIs em .NET para integração de sistemas.</li>
+                <li>Desenvolvimento em Java utilizando o framework JHipster.</li>
+                <li>Gerenciamento de máquinas virtuais na AWS.</li>
+                <li>Utilização de bancos de dados SQL Server e MySQL.</li>
+                <li>Automatização de relatórios em Power BI e criação de dashboards no Spotfire.</li>
+            </ul>
+            <div class="subheading mb-3">Analista de Sistemas Júnior</div>
+            <span class="text-primary">Agosto 2019 - Outubro 2020</span>
+            <ul>
+                <li>Suporte N2 e N3 aos sistemas PIMS IP.21 e MES.</li>
+                <li>Desenvolvimento de correções e melhorias em .NET.</li>
+                <li>Desenvolvimento de APIs em .NET para integração de sistemas.</li>
+                <li>Desenvolvimento em Java utilizando o framework JHipster.</li>
+                <li>Gerenciamento de máquinas virtuais na AWS.</li>
+                <li>Utilização de bancos de dados SQL Server e MySQL.</li>
+                <li>Automatização de relatórios em Power BI e criação de dashboards no Spotfire.</li>
+            </ul>
+            <div class="subheading mb-3">Estagiário</div>
+            <span class="text-primary">Agosto 2018 - Agosto 2019</span>
+            <ul>
+                <li>Suporte N2 e N3 aos sistemas PIMS IP.21 e MES.</li>
+                <li>Desenvolvimento de correções e melhorias em .NET.</li>
+                <li>Desenvolvimento de APIs em .NET para integração de sistemas.</li>
+                <li>Desenvolvimento em Java utilizando o framework JHipster.</li>
+                <li>Gerenciamento de máquinas virtuais na AWS.</li>
+                <li>Utilização de bancos de dados SQL Server e MySQL.</li>
+                <li>Automatização de relatórios em Power BI e criação de dashboards no Spotfire.</li>
+            </ul>
+        </div>
+
+        <!-- Experience Item - Elmaz Caminhões e Ônibus - Estagiário -->
+        <div class="resume-item">
+            <h3 class="mb-0">Elmaz Caminhões e Ônibus</h3>
+            <div class="subheading mb-3">Estagiário</div>
+            <span class="text-primary">Agosto 2017 - Junho 2018</span>
+            <ul>
+                <li>Atendimento de suporte técnico de nível 1, auxiliando na resolução de problemas de hardware e software.</li>
+                <li>Desenvolvimento de sistema interno de gerenciamento de desktops.</li>
+                <li>Suporte diário aos usuários, garantindo a continuidade das operações.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
 
         <hr class="m-0">
 
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-            <div class="my-auto">
-                <h2 class="mb-5">Formação</h2>
-
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Pontifícia Universidade Católica de Minas Gerais</h3>
-                        <div class="subheading mb-3">BACHARELADO</div>
-
-                        <p>SISTEMAS DE INFORMAÇÃO - 8º PERÍODO</p>
-
-  
-
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Janeiro 2017 - Julho 2021</span>
-                    </div>
-                </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">E.E Técnica Insdustrial Professor Fontes</h3>
-                        <div class="subheading mb-3">TÉCNICO</div>
-                        <p>TÉCNICO EM INFORMÁTICA</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Janeiro 2016 - Julho 2017</span>
-                    </div>
-                </div>
-
+        <!-- Skills Section -->
+        <section class="resume-section" id="skills" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">Competências</h2>
+                <div class="subheading mb-3">Linguagens & Ferramentas</div>
+                <ul class="list-inline dev-icons">
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top" title="OpenAI">
+                        <img src="img/openai-logo.png" alt="OpenAI Logo" style="width: 32px; height: 32px; margin-top: -20px;">
+                    </li>
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Python">
+                        <i class="devicon-python-plain colored" style="font-size: 2rem;"></i>
+                    </li>
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top" title="C#">
+                        <i class="devicon-csharp-plain colored" style="font-size: 2rem;"></i>
+                    </li>
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top" title="AWS">
+                        <i class="devicon-amazonwebservices-original colored" style="font-size: 2rem;"></i>
+                    </li>
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Docker">
+                        <i class="devicon-docker-plain colored" style="font-size: 2rem;"></i>
+                    </li>
+                    <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Kubernetes">
+                        <i class="devicon-kubernetes-plain colored" style="font-size: 2rem;"></i>
+                    </li>
+                    <!-- Removido Java e adicionado OpenAI -->
+                </ul>
+                <div class="subheading mb-3 mt-5">Conhecimentos</div>
+                <ul class="fa-ul mb-0">
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Python</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Microsserviços</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>GPT</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Gen AI</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>API da OpenAI</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>LLM (Large Language Models)</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Desenvolvimento de APIs RESTful</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Observabilidade e monitoramento com Datadog</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Kafka e RabbitMQ</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Banco de Dados SQL e NoSQL</li>
+                </ul>
             </div>
         </section>
 
         <hr class="m-0">
+
+        <!-- Contact Section -->
+        <section class="resume-section" id="contact" data-aos="fade-up">
+            <div class="container text-center">
+                <h2 class="section-title">Contato</h2>
+                <p class="mb-5">Estou disponível para oportunidades e projetos que desafiem minhas habilidades e me permitam contribuir com soluções inovadoras.</p>
+                <a href="mailto:higles.souza@gmail.com" class="btn btn-custom"><i class="fas fa-envelope"></i> Enviar
+                    E-mail</a>
+                <div class="social-icons mt-4">
+                    <a href="https://www.linkedin.com/in/higles/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/higlessouza" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5531982577800" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
 
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
 
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+        // Tooltip initialization
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
 </body>
 
 </html>
